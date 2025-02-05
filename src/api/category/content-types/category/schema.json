@@ -14,6 +14,12 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "category"
     }
   }
 }
