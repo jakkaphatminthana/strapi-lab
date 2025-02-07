@@ -51,4 +51,14 @@ export default factories.createCoreService("api::blog.blog", () => ({
       throw new HttpError();
     }
   },
+
+  getBySlug(slugs: string[]) {
+    return strapi.entityService.findMany("api::blog.blog", {
+      filters: {
+        slug: {
+          $in: slugs,
+        },
+      },
+    });
+  },
 }));

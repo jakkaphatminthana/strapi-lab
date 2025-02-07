@@ -15,7 +15,7 @@ const customRoutes = [
     config: {
       policies: [],
       middlewares: [],
-      auth: false,
+      // auth: false,
     },
   },
 ];
